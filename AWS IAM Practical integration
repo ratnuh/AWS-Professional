@@ -1,0 +1,43 @@
+We're given a scenario, create permission groups for three types of users: EC2-admin, EC2-Support, and S3-support
+In the search box to the right of  Services, search for and choose IAM to open the IAM console
+In the navigation pane on the left, choose Users.
+The following IAM Users have been created for you:
+user-1
+user-2
+user-3
+Choose the user-1 link.
+This will bring to a summary page for user-1. The Permissions tab will be displayed.
+Notice that user-1 does not have any permissions.
+Choose the Groups tab.
+user-1 also is not a member of any groups.
+Choose the Security credentials tab.
+user-1 is assigned a Console password.
+In the navigation pane on the left, choose User groups.
+   The following groups have already been created for you:
+EC2-Admin
+EC2-Support
+S3-Support
+Choose the EC2-Support group link.
+ This will bring you to the summary page for the EC2-Support group.
+Choose the Permissions tab.
+ This group has a Managed Policy associated with it, called AmazonEC2ReadOnlyAccess. Managed Policies are pre-built policies (built either by AWS or by your administrators) that can be attached to IAM Users and Groups. When the policy is updated, the changes to the policy are immediately apply against all Users and Groups that are attached to the policy.
+Choose the plus (+) icon next to the AmazonEC2ReadOnlyAccess policy to view the policy details.
+Note: A policy defines what actions are allowed or denied for specific AWS resources. 
+This policy is granting permission to List and Describe information about EC2, Elastic Load Balancing, CloudWatch and Auto Scaling. This ability to view resources, but not modify them, is ideal for assigning to a Support role.
+The basic structure of the statements in an IAM Policy is:
+Effect says whether to Allow or Deny the permissions.
+Action specifies the API calls that can be made against an AWS Service (eg cloudwatch:ListMetrics0
+Resource defines the scope of entities covered by the policy rule (eg a specific Amazon S3 bucket or Amazon EC2 instance, or * which means any resource).
+Choose the minus icon (-) to hide the policy details.
+In the navigation pane on the left, choose User groups.
+Choose the S3-Support group link and then choose the Permissions tab.
+ The S3-Support group has the AmazonS3ReadOnlyAccess policy attached.
+Choose the plus (+) icon to view the policy details.
+ This policy grants permissions to Get and List resources in Amazon S3.
+Choose the minus icon (-) to hide the policy details.
+In the navigation pane on the left, choose User groups.
+Choose the EC2-Admin group link and then choose the Permissions tab. 
+ This Group is slightly different from the other two. Instead of a Managed Policy, it has an Inline Policy, which is a policy assigned to just one User or Group. Inline Policies are typically used to apply permissions for one-off situations.
+Choose the plus (+) icon to view the policy details.
+This policy grants permission to view (Describe) information about Amazon EC2 and also the ability to Start and Stop instances.
+Choose the minus icon (-) to hide the policy details.
