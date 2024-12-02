@@ -1,5 +1,5 @@
 We're given a scenario, create permission groups for three types of users: EC2-admin, EC2-Support, and S3-support
-
+![image alt]https://github.com/ratnuh/AWS-Professional/blob/main/Screenshot%202024-11-19%20195217.png
 In the search box to the right of  Services, search for and choose IAM to open the IAM console
 In the navigation pane on the left, choose Users.
 The following IAM Users have been created for you:
