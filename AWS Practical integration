@@ -1,3 +1,4 @@
 We're given a scenario, create permission groups for three types of users: EC2-admin, EC2-Support, and S3-support
 
-![Alt text](Screenshot 2024-11-19 195217.png)
+To access security options we will enter the IAM panel under the services tabe in your browser.
+Under the users tab
